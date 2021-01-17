@@ -6,9 +6,11 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 # Orchestrate or schedule a set of jobs
 workflows:
-  docker:
+jobs:
+  build:
+    docker:
       - image: alpine:3.7
-  steps:
+    steps:
       - run:
           name: The First Step
           command: |
